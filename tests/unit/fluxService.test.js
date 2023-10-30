@@ -1131,7 +1131,7 @@ describe('fluxService tests', () => {
       const res = generateResponse();
       const expectedResponse = {
         status: 'success',
-        data: adminConfig.initial.kadena,
+        data: userconfig.initial.kadena,
       };
 
       const result = await fluxService.getFluxKadena(undefined, res);
