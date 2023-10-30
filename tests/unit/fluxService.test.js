@@ -1070,14 +1070,14 @@ describe('fluxService tests', () => {
 
       expect(result.status).to.equal('success');
       expect(result.data).to.be.a('string');
-      expect(result.data).to.equal(adminConfig.initial.zelid);
+      expect(result.data).to.equal(userconfig.initial.zelid);
     });
 
     it('should trigger rpc, response passed', async () => {
       const res = generateResponse();
       const expectedResponse = {
         status: 'success',
-        data: adminConfig.initial.zelid,
+        data: userconfig.initial.zelid,
       };
 
       const result = await fluxService.getFluxZelID(undefined, res);
